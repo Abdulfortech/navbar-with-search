@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Abdullahi Aminu">
+	<meta name="twitter handle" content="Abdulfortech">
+	<title>Navbar With Toggle Search</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- fontawesome -->
+  <link href="assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+	<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar With Toggle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <div class="">
+            <a type="button" id="searchIcon" class="btn mx-2 border border-success text-success rounded waves-effect"
+              target="_blank">
+              <i class="fa fa-search"></i>
+            </a>
+            <div class="search-form">
+                <form action="search.php" method="post">
+                  <input type="search" name="term" id="search" placeholder="Type keywords &amp; press enter...">
+                  <button type="submit" name="search" class="d-none"></button>
+                </form>
+                <!-- Close Icon -->
+                <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="container">
+    <div class="bg-light p-5 rounded">
+      <h1>Navbar With Toggle Search</h1>
+      <p class="lead">This example is a quick and small snippet to illustrate how implement toggle search container. </p>
+      <p>Designed by <a href="https://www.Abdulfortech.com">AbdulForTech</a></p>
+      <!-- <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a> -->
+    </div>
+  </main>
+
+<!-- scripts -->
+<!-- jQuery -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="assets/js/bootstrap.bundle.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script>  
+  <script type="text/javascript">
+      // :: 10.0 Search Box Active Code
+    $('#searchIcon').on('click', function(){
+        $('.search-form').toggleClass('search-active');
+    });
+    $('.closeIcon').on('click', function(){
+        $('.search-form').removeClass('search-active');
+    });
+  </script>
+  </body>
+</html>
